@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+Index
+{% endblock %}
+{% block main %}
+<h1>The Video Editing Conference</h1>
+    <p>This conference's purpose is to teach and prepare individuals about the
+        basics and resources of basic video editing for videos for platforms such as YouTube and TikTok</p>
+    <h2 id="when">When: November 12th, 2023</h2>
+    <img src="{{  url_for('static', filename='images/conference_main_pic.jpg' )}}" alt="Image of a video editor" width="640" height="360">
+{% endblock %}

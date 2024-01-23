@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Thank You
+{% endblock %}
+{% block main %}
+    <p> Thank you {{ fname }} {{ lname }} for registering! </p>
+    <p> User Data </p>
+    <ul>
+        <li>First name: {{ fname }}</li>
+        <li>Last name: {{ lname }}</li>
+        <li>Address: {{ address1 }} {{ address2 }}</li>
+        <li>City: {{ city }}</li>
+        <li>State: {{ state }}</li>
+        <li>Zipcode: {{ zip }}</li>
+        <li>Telephone: {{ telephone }}</li>
+        <li>Email: {{ email }}</li>
+        <li>Web: {{ web }}</li>
+        <li>Position: {{ position }}</li>
+        <li>Company: {{ company }}</li>
+        <li>Meal: {{ meal }}</li>
+        <li>Billing name: {{ billingfname }} {{ billinglname }}</li>
+        <li>Card Type: {{ cardtype }}</li>
+        <li>Card Number: {{ cardnum }}</li>
+        <li>CCV: {{ ccv_number }}</li>
+        <li>Expiration: {{ expyear }}/{{ expmonth }}</li>
+        <li>Sessions: {{ session1 }}, {{ session2 }}, {{ session3 }}</li>
+    </ul>
+{% endblock %}
+

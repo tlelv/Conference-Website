@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}
+Meals
+{% endblock %}
+{% block main %}
+    <div class="horizontalSection">
+        <div class="column">
+            <img src="{{  url_for('static', filename='images/burger.jpg' )}}" alt="Image of menu one burger" width="82" height="96"><br>
+            <h3>Menu Day 1</h3><br>
+            Breakfast<br>
+            Bacon strips and apple juice<br>
+            <br>
+            Lunch<br>
+            BLT and orange juice<br>
+            <br>
+            Dinner<br>
+            Bacon wrapped dates and lemonade<br>
+        </div>
+        <div class="column">
+            <img src="{{  url_for('static', filename='images/sushi.jpg' )}}" alt="Image of menu two sushi" width="82" height="96"><br>
+            <h3>Menu Day 2</h3><br>
+            Breakfast<br>
+            Turkey bacon strips and cran juice<br>
+            <br>
+            Lunch<br>
+            Barbeque bacon burger and tomato juice<br>
+            <br>
+            Dinner<br>
+            Bacon wrapped steak and limeade<br>
+        </div>
+    </div>
+    <div class="horizontalsection">
+        <p id="centertext">Full Meal Package: $250.00 (includes Dinner Day 2)<br>
+            Dinner Day 2: $75.00</p>
+    </div>
+</main>
+<div class="horizontalsection">
+    <div class="footer">
+        <footer>
+            <p><small> <a href="mailto:tle018@regis.edu"></a> tle018@regis.edu702-810-6157 </small></p>
+            <p>
+            <address>3333 Regis Blvd</address>
+            </p>
+            <p><small><i>While this web site was created to satisfy the requirement of
+                building a web site for an academic course at Regis University,
+                the views and opinions expressed on this web site are solely
+                those of the original author and do not necessarily represent the
+                views and opinions of Regis University.</i></small></p>
+        </footer>
+    </div>
+</div>
+{% endblock %}
+

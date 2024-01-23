@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+Awards
+{% endblock %}
+{% block main %}
+<table class="table">
+    <thead>
+    <tr class="tablehead">
+        <td>Video Thumbnail</td>
+        <td>Creator Name</td>
+        <td>Caption</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><img src="{{  url_for('static', filename='images/mrBeastThumbnail.jpg' )}}" alt="Mr Beast Thumbnail" width="250" height="125"></td>
+        <td>Mr. Beast</td>
+        <td>Stay in the circle for 100 days challenge!</td>
+    </tr>
+    <tr>
+        <td><img src="{{  url_for('static', filename='images/charlieThumbnail.jpg' )}}" alt="Charlie Thumbnail" width="250" height="125"></td>
+        <td>penguinz0</td>
+        <td>You won't believe what I just saw</td>
+    </tr>
+    <tr>
+        <td><img src="{{  url_for('static', filename='images/genericThumbnail.jpg' )}}" alt="Generic Thumbnail" width="250" height="125"></td>
+        <td>Billy Bob</td>
+        <td>Check out my thumbnail!</td>
+    </tr>
+    </tbody>
+ {{ message }}
+</table>
+        <form onsubmit="getDataFromRadioButtons()" method="POST">
+        <p><label for="beast">
+            <input type="radio" name="poll" value="Beast" id="beast" required>Mr. Beast
+        </label></p>
+        <div><p>They have <span id="numVotes1">0</span> votes!</p></div>
+
+        <p><label for="charlie">
+            <input type="radio" name="poll" value="Charlie" id="charlie" required>Charlie
+        </label></p>
+        <div><p>They have <span id="numVotes2">0</span> votes!</p></div>
+
+        <p><label for="billy">
+            <input type="radio" name="poll" value="Billy" id="billy" required>Billy
+        </label></p>
+        <div><p>They have <span id="numVotes3">0</span> votes!</p></div>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}

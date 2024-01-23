@@ -1,0 +1,70 @@
+/* Treyson Le */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.center {
+    border: 2px solid blue;
+    margin: auto;
+    text-align: center;
+    top: 50%;
+    width: 20%;
+}
+
+div.main {
+    background-color: white;
+    margin: auto;
+    display: inline-block;
+}
+
+div.row {
+    margin-left: 30mm;
+    margin-right: 30mm;
+    text-align: justify;
+    height: 50mm;
+    width: 152mm;
+    display: inline-block;
+    clear: right;
+    border-collapse: collapse;
+
+
+}
+div.left {
+    width: 76mm;
+    height: 50mm;
+    text-align: center;
+    float: left;
+    clear: left;
+    border-collapse: collapse;
+
+}
+div.right {
+    width: 76mm;
+    height: 50mm;
+    text-align: center;
+    float: right;
+    clear: right;
+    border-collapse: collapse;
+}
+
+.firstname, .lastname {
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+
+.title {
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+
+
+
+
+

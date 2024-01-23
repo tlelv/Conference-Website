@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+Poll
+{% endblock %}
+{% block main %}
+    <script src="../jss/polls.js"></script>
+    <form action="thankyou.html" onsubmit="getDataFromRadioButtons()" method="POST">
+        <p><label for="beast">
+            <input type="radio" name="poll" value="Beast" id="beast" required>Mr. Beast
+        </label></p>
+        <div><p>They have <span id="numVotes1">0</span> votes!</p></div>
+
+        <p><label for="charlie">
+            <input type="radio" name="poll" value="Charlie" id="charlie" required>Charlie
+        </label></p>
+        <div><p>They have <span id="numVotes2">0</span> votes!</p></div>
+
+        <p><label for="billy">
+            <input type="radio" name="poll" value="Billy" id="billy" required>Billy
+        </label></p>
+        <div><p>They have <span id="numVotes3">0</span> votes!</p></div>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}

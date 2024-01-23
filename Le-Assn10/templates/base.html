@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- Name: Treyson Le
+     Assignment: CS336 Assignment #8
+     Created: 11/12/2023
+     Description: Base page of the conference site -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="CSS, HTML, Video Editing">
+    <meta name="description" content="Video editing conference website">
+    <meta name="author" content="Treyson Le">
+    <meta name="robots" content="">
+    <meta name="encoding" content="UTF-8">
+    <link rel="stylesheet" href="../css/webdefault.css" type="text/css">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<header>
+    {% include "nav.html" %}
+</header>
+<main>
+{% block main %} {% endblock %}
+</main>
+<footer>
+    <p><small> <a href="mailto:tle018@regis.edu"></a> tle018@regis.edu702-810-6157 </small></p>
+    <p>
+    <address>3333 Regis Blvd</address>
+    </p>
+    <p><small><i>While this web site was created to satisfy the requirement of
+        building a web site for an academic course at Regis University,
+        the views and opinions expressed on this web site are solely
+        those of the original author and do not necessarily represent the
+        views and opinions of Regis University.</i></small></p>
+</footer>
+</body>
+</html>
+

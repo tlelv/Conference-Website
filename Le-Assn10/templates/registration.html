@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% block title %}
+Registration
+{% endblock %}
+{% block main %}
+    <div>
+        <form onsubmit="return validateData()" method="POST">
+            <fieldset class="info">
+                <p>
+                    <label for="conferenceid">Please enter id number</label>
+                    <input type="text" id="conferenceid" name="id" required
+                           placeholder="Please enter your conference id. Use this format: ######."
+                           title="Your id is required. Use this format: ######." autocomplete="on" size="10"
+                           maxlength="6" value="" pattern="[0-9]{6}" class="hover">
+                </p>
+            </fieldset>
+            <fieldset class="info">
+                <p>
+                    <label for="title">Title:</label>
+                    <select name="title" id="title" class="hover">
+                        <option value="">Please select a title</option>
+                        <option value="mr">Mr.</option>
+                        <option value="ms">Ms.</option>
+                        <option value="mrs">Mrs.</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+                <p><label for="firstname">First Name:&nbsp;</label>
+                    <input name="firstname" type="text" required placeholder="Please enter your first name in the box."
+                           title="Your first name is required." autocomplete="on" size="20" maxlength="30"
+                           value="Treyson"
+                           pattern="[a-zA-Z]+" class="hover" id="firstname"></p>
+                <p>
+                    <label for="lastname">Last Name:&nbsp;</label>
+                    <input name="lastname" type="text" required placeholder="Please enter your last name in the box."
+                           title="Your last name is required." autocomplete="on" size="20" maxlength="30" value="Le"
+                           pattern="[a-zA-Z]+" class="hover" id="lastname"></p>
+                <p>
+                    <label for="address1">Address line 1:&nbsp;</label>
+                    <input name="address1" type="text" required placeholder="Please enter your address in the box."
+                           title="Your address is required." autocomplete="on" size="35" maxlength="30"
+                           value="3333 Regis Blvd"
+                           pattern="[a-zA-Z0-9\ \#]+" class="hover" id="address1"></p>
+                <p>
+                    <label for="address2">Address line 2:&nbsp;</label>
+                    <input name="address2" type="text" placeholder="Apt number, Mail box, etc."
+                           title="" autocomplete="on" size="35" maxlength="30" pattern="[a-zA-Z0-9\ \#]+" class="hover"
+                           id="address2"></p>
+                <p>
+                    <label for="city">City:&nbsp;</label>
+                    <input name="city" type="text" required placeholder="Please enter your city in the box."
+                           title="Your city is required." autocomplete="on" size="15" maxlength="30" value="Denver"
+                           pattern="[a-zA-Z]+" class="hover" id="city"></p>
+                <p>
+                    <label for="state">State:</label>
+                    <select name="state" id="state" class="hover">
+                        <option value="">Please select a state</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="zip">Zip Code:&nbsp;</label>
+                    <input name="zip" type="text" required
+                           placeholder="Please enter your zip code in the box. Use this format: #####."
+                           title="Your zip code is required. Use this format: #####." autocomplete="on" size="6"
+                           maxlength="30" value="80221" pattern="[0-9]{5}" class="hover" id="zip"></p>
+                <p>
+                    <label for="phone">Telephone Number:&nbsp;</label>
+                    <input name="phone" type="tel" required
+                           placeholder="Please enter your phone number in the box. Use this format: ###-###-####."
+                           title="Your phone number is required. Use this format: ###-###-####."
+                           autocomplete="on" size="14" maxlength="30" value="123-456-7898"
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9 {4}" class="hover" id="phone"></p>
+                <p>
+                    <label for="email">Email:&nbsp;</label>
+                    <input name="email" type="email"
+                           required placeholder="Please enter your email in the box. Use this format: example@email.com"
+                           id="email"
+                           title="Your email is required. Use this format: example@email.com" autocomplete="on"
+                           size="70"
+                           maxlength="50" value="placehold@gmail.com" class="hover"
+                    ></p>
+            </fieldset>
+            <fieldset class="info">
+                <p>
+                    <label for="position">Position with company:&nbsp;</label>
+                    <input name="position" type="text" required placeholder="Please enter your position in the box."
+                           title="Your position is required." autocomplete="on" size="25" maxlength="30" value="CEO"
+                           pattern="[a-zA-Z0-9\s]+" class="hover" id="position"></p>
+                <p>
+                    <label for="company">Name of company:&nbsp;</label>
+                    <input name="company" type="text" required placeholder="Please enter your company in the box."
+                           title="Your company is required." autocomplete="on" size="25" maxlength="30" value="Costco"
+                           pattern="[a-zA-Z0-9\s]+" class="hover" id="company"></p>
+            </fieldset>
+            <fieldset class="info">
+                <p>
+                    <input type="radio" id="workshop1" name="session1" value="workshop1">
+                    <label for="workshop1">Utilizing Converters</label><br>
+                    <input type="radio" id="workshop2" name="session1" value="workshop2">
+                    <label for="workshop2">Thumbnail Design</label><br>
+                    <input type="radio" id="workshop3" name="session1" value="workshop3">
+                    <label for="workshop3">Video Planning</label></p>
+                <p>
+                    <input type="radio" id="workshop4" name="session2" value="workshop4">
+                    <label for="workshop4">Video Editing Basics</label><br>
+                    <input type="radio" id="workshop5" name="session2" value="workshop5">
+                    <label for="workshop5">Video Editing Advanced</label><br>
+                    <input type="radio" id="workshop6" name="session2" value="workshop6">
+                    <label for="workshop6">Video Enhancing</label></p>
+                <p>
+                    <input type="radio" id="workshop7" name="session3" value="workshop7">
+                    <label for="workshop7">Video collaboration/networking</label><br>
+                    <input type="radio" id="workshop8" name="session3" value="workshop8">
+                    <label for="workshop8">Advertisement/Promotion of videos</label><br>
+                    <input type="radio" id="workshop9" name="session3" value="workshop9">
+                    <label for="workshop9">Different mediums of videos </label></p>
+            </fieldset>
+            <p><input type="submit"></p>
+        </form>
+    </div>
+    <script src="../jss/forms.js"></script>
+{% endblock %}
